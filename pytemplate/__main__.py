@@ -25,7 +25,7 @@ def main():
     )
     logger.info("Nevermind those guys, onto the main event...")
     logger.info("Hello! This is a template python package.")
-    logger.info(f"Feel free to suggest additions at {__project_urls__['Bugs']}")
+    logger.info(f"Feel free to suggest additions at {__project_urls__['Bugs']}new?assignees=&labels=enhancement&template=feature_request.md&title=")
 
 
 if __name__ == "__main__":

@@ -1,8 +1,8 @@
 # Author: Daniel Nicolas Gisolfi
 
-repo=`grep __title__ ./pytemplate/__version__.py | grep -o '"[^"]\+"' | cut -d '"' -f2`
-version=`grep __version__ ./pytemplate/__version__.py | grep -o '"[^"]\+"' | cut -d '"' -f2`
-pypi_url=https://pypi.org/project/$(repo)
+repo=`grep -m 1 __title__ ./pytemplate/__version__.py | grep -o '"[^"]\+"' | cut -d '"' -f2`
+version=`grep -m 1 __version__ ./pytemplate/__version__.py | grep -o '"[^"]\+"' | cut -d '"' -f2`
+pypi_url=https://upload.pypi.org/legacy/
 
 .PHONY: intro
 intro:
@@ -20,7 +20,6 @@ clean:
 	-rm -rf ./$(repo)/$(repo).egg-info ./.eggs ./$(repo).egg-info
 	-rm -f *.pyc *.pyo *.pyd *\$$py.class
 	-find . -name "*.pyc" -exec rm -f {} \;
-	-rm .pytest_cache
 	-rm *.log
 	-rm *.txt
 
