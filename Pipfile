@@ -1,0 +1,22 @@
+# Copyright Daniel Gisolfi 2020 All Rights Reserved.
+
+[[source]]
+name = "pypi"
+url = "https://pypi.org/simple"
+verify_ssl = true
+
+[dev-packages]
+autopep8 = "*"
+pylint = "*"
+pytest = "*"
+black = "==19.10b0"
+wheel = "*"
+pipenv-setup = "*"
+recommonmark = "*"
+twine = "*"
+isort = "*"
+
+[packages]
+
+[requires]
+python_version = "3.7"
